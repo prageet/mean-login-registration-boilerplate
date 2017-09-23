@@ -1,5 +1,5 @@
 ﻿{
     "connectionString": "<connection-string>",
-    "apiUrl": "http://localhost:3000/api",
+    "apiUrl": "https://heroku-node-login-app.herokuapp.com/api",
     "secret": "ADD YOUR OWN STRING"
 }
