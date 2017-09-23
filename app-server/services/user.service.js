@@ -9,7 +9,7 @@ var UserModel = require('app-server/models/users.js');
 
 //var db = mongo.db(config.connectionString, { native_parser: true });
 //db.bind('users');
-mongoose.connect(process.env.MONGOLAB_URI || "mongodb://prageet:1qaz!QAZ@ds123124.mlab.com:23124/prageettodoapp");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://prageet:1qaz!QAZ@ds123124.mlab.com:23124/prageettodoapp");
 
 var service = {};
 
