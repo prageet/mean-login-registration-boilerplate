@@ -22,10 +22,7 @@ service.getById = getById;
 service.create = create;
 service.update = update;
 service.delete = _delete;
-<<<<<<< HEAD
 service.getAllUsers = getAllUsers;
-=======
->>>>>>> 19dbd7d40bd02788211b47d6f5c914e09c2b1b6f
 
 module.exports = service;
 
@@ -64,7 +61,6 @@ function getById(_id) {
     return deferred.promise;
 }
 
-<<<<<<< HEAD
 function getAllUsers() {
     var deferred = Q.defer();
 
@@ -83,8 +79,6 @@ function getAllUsers() {
     return deferred.promise;
 }
 
-=======
->>>>>>> 19dbd7d40bd02788211b47d6f5c914e09c2b1b6f
 function create(userParam) {
     var deferred = Q.defer();
 
