@@ -18,6 +18,7 @@ service.getById = getById;
 service.create = create;
 service.update = update;
 service.delete = _delete;
+service.getAllUsers = getAllUsers;
 
 module.exports = service;
 
@@ -47,6 +48,24 @@ function getById(_id) {
         if (user) {
             // return user (without hashed password)
             deferred.resolve(_.omit(user, 'hash'));
+        } else {
+            // user not found
+            deferred.resolve();
+        }
+    });
+
+    return deferred.promise;
+}
+
+function getAllUsers() {
+    var deferred = Q.defer();
+
+    UserModel.find({}, function (err, users) {
+        if (err) deferred.reject(err.name + ': ' + err.message);
+
+        if (users.length) {
+            // return users list
+            deferred.resolve(users);
         } else {
             // user not found
             deferred.resolve();

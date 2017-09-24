@@ -9,6 +9,7 @@ router.post('/register', registerUser);
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
 router.delete('/:_id', deleteUser);
+router.get('/', getUsers);
 
 module.exports = router;
 
@@ -43,6 +44,20 @@ function getCurrentUser(req, res) {
         .then(function (user) {
             if (user) {
                 res.send(user);
+            } else {
+                res.sendStatus(404);
+            }
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}
+
+function getUsers(req, res) {
+    userService.getAllUsers()
+        .then(function (users) {
+            if (users.length) {
+                res.send(users);
             } else {
                 res.sendStatus(404);
             }
