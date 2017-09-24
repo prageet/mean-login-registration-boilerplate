@@ -9,7 +9,10 @@ router.post('/register', registerUser);
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
 router.delete('/:_id', deleteUser);
+<<<<<<< HEAD
 router.get('/', getUsers);
+=======
+>>>>>>> 19dbd7d40bd02788211b47d6f5c914e09c2b1b6f
 
 module.exports = router;
 
@@ -53,6 +56,7 @@ function getCurrentUser(req, res) {
         });
 }
 
+<<<<<<< HEAD
 function getUsers(req, res) {
     userService.getAllUsers()
         .then(function (users) {
@@ -67,6 +71,8 @@ function getUsers(req, res) {
         });
 }
 
+=======
+>>>>>>> 19dbd7d40bd02788211b47d6f5c914e09c2b1b6f
 function updateUser(req, res) {
     var userId = req.user.sub;
     if (req.params._id !== userId) {
