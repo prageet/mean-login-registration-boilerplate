@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "<connection-string>",
+    "connectionString": "<connection-string-mongodb>",
     "apiUrl": "https://heroku-node-login-app.herokuapp.com/api",
     "secret": "ADD YOUR OWN STRING"
 }
